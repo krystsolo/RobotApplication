@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox fillWidth="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="RobotApplication.controllers.SteerageRightBorderController">
+   <children>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ruch TCP" textOrigin="CENTER">
+         <VBox.margin>
+            <Insets bottom="20.0" left="75.0" />
+         </VBox.margin>
+      </Text>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="x">
+         <VBox.margin>
+            <Insets left="150.0" />
+         </VBox.margin>
+      </Text>
+      <TextField prefHeight="0.0" prefWidth="100.0" fx:id="xTextField">
+         <VBox.margin>
+            <Insets bottom="20.0" left="120.0" />
+         </VBox.margin>
+      </TextField>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="y">
+         <VBox.margin>
+            <Insets left="150.0" />
+         </VBox.margin>
+      </Text>
+      <TextField fx:id="yTextField" prefHeight="0.0" prefWidth="100.0">
+         <VBox.margin>
+            <Insets bottom="20.0" left="120.0" />
+         </VBox.margin>
+      </TextField>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="z">
+         <VBox.margin>
+            <Insets left="150.0" />
+         </VBox.margin>
+      </Text>
+      <TextField fx:id="zTextField"  prefHeight="0.0" prefWidth="100.0">
+         <VBox.margin>
+            <Insets bottom="20.0" left="120.0" />
+         </VBox.margin>
+      </TextField>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="teta">
+         <VBox.margin>
+            <Insets left="150.0" />
+         </VBox.margin>
+      </Text>
+      <TextField fx:id="tetaTextField" prefHeight="0.0" prefWidth="100.0">
+         <VBox.margin>
+            <Insets left="120.0" />
+         </VBox.margin>
+      </TextField>
+      <Button fx:id="tcpMoveButton" contentDisplay="RIGHT" minWidth="53.0" mnemonicParsing="false" onAction="#tcpMoveOnAction" prefHeight="40.0" prefWidth="120.0" text="Ruch">
+         <VBox.margin>
+            <Insets left="120.0" top="20.0" />
+         </VBox.margin>
+      </Button>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ruch przegubami">
+         <VBox.margin>
+            <Insets bottom="20.0" left="75.0" top="50.0" />
+         </VBox.margin>
+      </Text>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="teta1">
+         <VBox.margin>
+            <Insets left="150.0" />
+         </VBox.margin>
+      </Text>
+      <TextField fx:id="teta1TextField"  prefHeight="0.0" prefWidth="100.0">
+         <VBox.margin>
+            <Insets bottom="20.0" left="120.0" />
+         </VBox.margin>
+      </TextField>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="teta2">
+         <VBox.margin>
+            <Insets left="150.0" />
+         </VBox.margin>
+      </Text>
+      <TextField fx:id="teta2TextField"  prefHeight="0.0" prefWidth="100.0">
+         <VBox.margin>
+            <Insets bottom="20.0" left="120.0" />
+         </VBox.margin>
+      </TextField>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="teta3">
+         <VBox.margin>
+            <Insets left="150.0" />
+         </VBox.margin>
+      </Text>
+      <TextField fx:id="teta3TextField"  prefHeight="0.0" prefWidth="100.0">
+         <VBox.margin>
+            <Insets bottom="20.0" left="120.0" />
+         </VBox.margin>
+      </TextField>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="teat4">
+         <VBox.margin>
+            <Insets left="150.0" />
+         </VBox.margin>
+      </Text>
+      <TextField fx:id="teta4TextField" prefHeight="0.0" prefWidth="100.0">
+         <VBox.margin>
+            <Insets bottom="20.0" left="120.0" />
+         </VBox.margin>
+      </TextField>
+      <Button fx:id="jointMoveButton" mnemonicParsing="false" onAction="#jointMoveOnAction" prefHeight="40.0" prefWidth="120.0" text="Ruch">
+         <VBox.margin>
+            <Insets bottom="20.0" left="120.0" />
+         </VBox.margin>
+      </Button>
+   </children>
+</VBox>
