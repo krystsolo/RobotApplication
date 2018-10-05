@@ -8,36 +8,17 @@ import java.util.Arrays;
 import java.util.List;
 
 public enum TypeOfAction {
-    MJ{
-        @Override
-        public String toString() {
-            return "MJ";
-        }
-    },
-    MP{
-        @Override
-        public String toString() {
-            return "MP";
-        }
-    },
-    GC {
-        @Override
-        public String toString() {
-            return "GRIPPER CLOSE";
-        }
-    },
-    GO {
-        @Override
-        public String toString() {
-            return "GRIPPER OPEN";
-        }
-    },
-    WAIT{
-        @Override
-        public String toString() {
-            return "WAIT";
-        }
-    };
+    MJ("MJ"), MP("MP"), GC("GRIPPER CLOSE"), GO("GRIPPER OPEN"), WAIT("WAIT");
+
+    private String typeOfActionContent;
+
+    private TypeOfAction(String typeOfActionContent){
+        this.typeOfActionContent = typeOfActionContent;
+    }
+
+    public String getContent(){
+        return typeOfActionContent;
+    }
 
     public static List<TypeOfAction> getListOfTypesOfAction(){
         return Arrays.asList(TypeOfAction.values());

@@ -1,16 +1,16 @@
 package RobotApplication.controllers;
 
 public enum TypeOfInstructionWindowEnum {
-    ADDING {
-        @Override
-        public String toString() {
-            return "Dodaj instrukcję:";
-        }
-    },
-    EDITING {
-        @Override
-        public String toString() {
-            return "Edytuj instrukcję:";
-        }
+    ADDING("Dodaj instrukcję:"), EDITING("Edytuj instrukcję:");
+
+    private String content;
+
+    TypeOfInstructionWindowEnum(String content) {
+        this.content = content;
     }
+
+    public String toString() {
+        return content;
+    }
+
 }

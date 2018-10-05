@@ -6,6 +6,8 @@ import RobotApplication.models.ProgramModel;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 
+import static RobotApplication.controllers.TypeOfProgramActionEnum.*;
+
 
 public class ProgramsViewController {
     private static TypeOfProgramActionEnum typeOfAction;
@@ -38,22 +40,24 @@ public class ProgramsViewController {
     public void confirmOnAction() {
         String textFromFieldAsProgramName = newProgramNameTextField.getText();
 
-        if (typeOfAction == TypeOfProgramActionEnum.CREATE) {
-            programModel.createProgramInDataBase(textFromFieldAsProgramName);
+        switch(typeOfAction) {
+            case CREATE:
+                programModel.createProgramInDataBase(textFromFieldAsProgramName);
 
-        } else if (typeOfAction == TypeOfProgramActionEnum.DELETE) {
-            programModel.deleteProgramFromDataBase(textFromFieldAsProgramName);
+            case DELETE:
+                programModel.deleteProgramFromDataBase(textFromFieldAsProgramName);
 
-        } else if (typeOfAction == TypeOfProgramActionEnum.LOAD) {
-            programModel.loadProgramFromDataBase(textFromFieldAsProgramName);
+            case LOAD:
+                programModel.loadProgramFromDataBase(textFromFieldAsProgramName);
 
-        } else if (typeOfAction == TypeOfProgramActionEnum.SAVE_AS) {
-            programModel.saveProgramAsToDataBase(textFromFieldAsProgramName);
+            case SAVE_AS:
+                programModel.saveProgramAsToDataBase(textFromFieldAsProgramName);
 
-        } else if (typeOfAction == TypeOfProgramActionEnum.CHANGE_NAME) {
-            String oldProgramName = programsListView.getSelectionModel().getSelectedItem();
-            programModel.changeProgramName(oldProgramName, textFromFieldAsProgramName);
+            case CHANGE_NAME:
+                String oldProgramName = programsListView.getSelectionModel().getSelectedItem();
+                programModel.changeProgramName(oldProgramName, textFromFieldAsProgramName);
         }
+
         programLeftBorderController.loadCenterWindowFxml();
     }
 

@@ -102,9 +102,8 @@ public class AddOrEditInstructionWindowController {
             return ((RobotMove) robotAction).ifJointsAnglesCorrected();
         } else if(robotAction.getTypeOfAction() == TypeOfAction.MP){
             return ((RobotMove) robotAction).isTcpMoveParametersProper();
-        } else {
-            return true;
         }
+        return false;
     }
 
     private RobotAction createRobotActionInstance() {
